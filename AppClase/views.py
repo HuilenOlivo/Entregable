@@ -15,12 +15,6 @@ def familiares(request):
     hermano = Familiar(parentesco="Hermano", nombre="Agustin", edad=29, nacimiento="1991-12-09") 
     hermano.save()
 
-    
-        
-    ppadre='Familiar: '+padre.parentesco+' -Nombre: '+padre.nombre+' -Edad: '+str(padre.edad)+' -Nacimiento:'+str(padre.nacimiento)
-    mmadre='Familiar: '+madre.parentesco+' -Nombre: '+madre.nombre+' -Edad: '+str(madre.edad)+' -Nacimiento:'+str(madre.nacimiento)
-    hhermano='Familiar: '+hermano.parentesco+' -Nombre: '+hermano.nombre+' -Edad: '+str(hermano.edad)+' -Nacimiento:'+str(hermano.nacimiento)
-
     listaFamiliares =[padre, madre, hermano]
 
     return render(request, 'AppClase/familiares.html', {'familiares':listaFamiliares})

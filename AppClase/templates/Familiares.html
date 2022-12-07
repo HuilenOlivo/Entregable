@@ -8,11 +8,12 @@
 </head>
 <body>
     <h1>Los familiares son los siguientes:</h1>
+    
+    <ul>
+        {% for familiar in familiares %}
+               <li>Parentesco: {{ familiar.parentesco }}, Nombre: {{ familiar.nombre }} , Edad: {{ familiar.edad }}, Nacimiento: {{ familiar.nacimiento }}</li>
+        {% endfor %}
+    </ul>
 
-    {% for familiar in familiares %}
-    <br>
-    Parentesco: {{ familiar.parentesco }}, Nombre: {{ familiar.nombre }} , Edad: {{ familiar.edad }}, Nacimiento: {{ familiar.nacimiento }}, 
-    <br>
-    {% endfor %}
 </body>
 </html>
