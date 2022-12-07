@@ -12,12 +12,12 @@
     
     <ul>
         {% for familiar in familiares %}
-            {% if familiar.parentesco == 'Padre'%}
+            {% if familiar.parentesco == 'Madre'%}
             <h2>Parentesco: {{ familiar.parentesco }}, Nombre: {{ familiar.nombre }} , Edad: {{ familiar.edad }}, Nacimiento: {{ familiar.nacimiento }}</h2>
             {% endif%}
         {% endfor %}
     </ul>
 
-
+    
 </body>
 </html>
