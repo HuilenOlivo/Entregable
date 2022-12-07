@@ -7,11 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Los familiares son los siguientes:</h1>
+    <h1>Familiares:</h1>
     
     <ul>
         {% for familiar in familiares %}
-               <li>Parentesco: {{ familiar.parentesco }}, Nombre: {{ familiar.nombre }} , Edad: {{ familiar.edad }}, Nacimiento: {{ familiar.nacimiento }}</li>
+            {% if familiar.parentesco == 'Padre'%}
+            <h2>Parentesco: {{ familiar.parentesco }}, Nombre: {{ familiar.nombre }} , Edad: {{ familiar.edad }}, Nacimiento: {{ familiar.nacimiento }}</h2>
+            {% endif%}
+        {% endfor %}
+    </ul>
+
+
+    <ul>
+        {% for familiar in familiares %}
+            {% if familiar.parentesco == 'Madre'%}
+            <h2>Parentesco: {{ familiar.parentesco }}, Nombre: {{ familiar.nombre }} , Edad: {{ familiar.edad }}, Nacimiento: {{ familiar.nacimiento }}</h2>
+            {% endif%}
+        {% endfor %}
+    </ul>
+
+
+    <ul>
+        {% for familiar in familiares %}
+            {% if familiar.parentesco == 'Hermano'%}
+            <h2>Parentesco: {{ familiar.parentesco }}, Nombre: {{ familiar.nombre }} , Edad: {{ familiar.edad }}, Nacimiento: {{ familiar.nacimiento }}</h2>
+            {% endif%}
         {% endfor %}
     </ul>
 

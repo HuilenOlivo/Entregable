@@ -17,4 +17,4 @@ def familiares(request):
 
     listaFamiliares =[padre, madre, hermano]
 
-    return render(request, 'AppClase/familiares.html', {'familiares':listaFamiliares})
+    return render(request, 'familiares.html', {'familiares':listaFamiliares})
